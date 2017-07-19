@@ -1,0 +1,17 @@
+{
+  "name": "home_test",
+  "version": "1.0.0",
+  "description": "To build -> npm install; To start server -> npm start",
+  "main": "index.html",
+  "scripts": {
+    "postinstall": "bower i --save",
+    "start": "gulp connect"
+  },
+  "author": "Alexander Khomenker",
+  "license": "ISC",
+  "dependencies": {
+
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0"
+  }
+}

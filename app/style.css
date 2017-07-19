@@ -1,0 +1,18 @@
+ul {
+    font-size: 16px;
+    padding: 0;
+
+}
+
+li {
+    font-size: 16px;
+    padding-left: 20px;
+    list-style-type: none;
+
+}
+
+.selected {
+    background-color: #51ebff;
+    display: inline-block;
+    width: 100%;
+}
