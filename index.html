@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+
+
+</head>
+<body ng-app="myApp" ng-controller="myCtrl">
+
+<h2>Contact Tree</h2>
+<div>
+    <ul ng-repeat="v in contacts"><span ng-click="show1=!show1; itemFocused(v)"
+                                        ng-class="{selected: v.id===focused.id}"> {{v.name}}</span>
+        <li ng-repeat="j in v.contacts" ng-if="show1"><span ng-click="show2=!show2; itemFocused(j)"
+                                                              ng-class="{selected: j.id===focused.id}">{{j.name}}</span>
+            <ul>
+                <li ng-repeat="k in j.contacts" ng-if="show2"><span ng-click="itemFocused(k)"
+                                                                      ng-class="{selected: k.id===focused.id}">{{k.name}}</span>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>
+
