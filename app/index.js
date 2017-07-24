@@ -15,9 +15,18 @@ var app = angular.module("myApp", [])
                         type: "Group",
                         contacts: [
                             {id: 7, name: "Itay", type: "Contact"},
+                            {id: 10, name: "Sarah", type: "Contact"},
+                            {
+                                id: 11,
+                                name: "Old-old Friends",
+                                type: "Group",
+                                contacts: [
+                                    {id: 12, name: "Mike", type: "Contact"},
+                                    {id: 13, name: "George", type: "Contact"}
+                                ]
+                            },
                         ]
-                    },
-                ]
+                    },]
             },
             {
                 id: 4,
@@ -31,10 +40,11 @@ var app = angular.module("myApp", [])
         ];
 
         $scope.contacts = contacts;
-        $scope.show1=false;
-        $scope.show2=false;
+        $scope.show1 = false;
+        $scope.show2 = false;
+        $scope.show3 = false;
         $scope.itemFocused = function (item) {
-            $scope.focused=item
+            $scope.focused = item
 
         }
 
